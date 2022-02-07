@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "sass": "sass --watch scss/main.scss assets/css/main.css"
+  },
+  "dependencies": {
+    "sass": "^1.49.0",
+    "sweetalert2": "^11.3.6"
+  }
+}

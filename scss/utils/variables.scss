@@ -1,0 +1,29 @@
+// ------------- IMPORTS 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,700;0,900;1,300&display=swap');
+
+//------------------------ VARIABLES
+// FONT
+$font-nunito: 'Nunito', sans-serif;
+
+$thin: 300;
+$thin-italic: italic;
+$regular: 400; 
+$bold: 700;
+$black: 900;
+
+// COLORS
+$main:#97ce4c;
+$secondary:#f0e14a;
+$dark:#44281d;
+$skin:#e4a788;
+$pink:#e89ac7;
+
+// BREAKPOINTS
+$breakpoints-screen:(
+   xs:380px, //small
+   sm: 576px, //phone
+   md: 768px, //tablet
+   lg: 992px, //laptop
+   xl: 1200px, //desktop
+   xxl: 1400px //desktop-lg
+);

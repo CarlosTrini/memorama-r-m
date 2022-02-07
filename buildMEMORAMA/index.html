@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>R&M memorama</title>
+  </head>
+  <body id="body" class="block-body">
+    <header class="header">
+      <nav class="nav container">
+        <img src="./assets/images/logo.png" alt="logo" class="logo">
+        <div class="menu-responsive" id="menuResponsive">
+          <img src="./assets/images/portal.png" alt="" />
+        </div>
+        <ul class="nav-items" id="nav">
+          <li id="success">Encontradas: <span>0</span></li>
+          <li id="attempts">Intentos: <span>0</span></li>
+          <li id="errors">Errores: <span>0</span></li>
+        </ul>
+        <button id="replay" class="replay none">Jugar de nuevo</button>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="cards container">
+        <div class="cards-container" id="cardsContainer">
+
+          <!-- <template id="templateCard">
+            <div class="card">
+              <img src="" alt="" class="card-img" data-id="" data-img="front" id="cardImg"/>
+              <div class="card-img-back" data-id="" data-img="back" id="cardBackImg"></div>
+            </div> <!--card-->      
+          </template>
+             -->
+        </div> <!--cards container-->
+      </div>
+    </main>
+
+    <div class="form-container" id="formContainer">
+      <div class="loading none" id="loading">
+        <h2 class="loading-characters">Buscando personajes en sus universos</h2>
+        <img src="./assets/images/portal.png" alt="">
+      </div>
+    <form class="form-level"  id="formLevel">
+       <div class="fields">
+          <label for="level">Selecciona un nivel:</label>
+          <select name="level" id="level" >
+            <option value="" disabled selected>Selecciona</option>
+            <option value="easy">Easy</option>
+            <option value="medium">medium</option>
+            <option value="hard">hard</option>
+          </select>
+         </div>
+         <input type="submit" value="Jugar!">
+         </form>
+    </div>
+
+
+
+    <!-- <script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/main.js" type="module"></script>
+  </body>
+</html>

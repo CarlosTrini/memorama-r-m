@@ -1,0 +1,25 @@
+@use './variables' as vars;
+
+@mixin phone{
+   @media (min-width: map-get($map: vars.$breakpoints-screen, $key: "sm") ) {
+      @content;
+   }
+}
+
+@mixin tablet{
+   @media (min-width: map-get($map: vars.$breakpoints-screen, $key: "md")){
+      @content;
+   }
+}
+
+@mixin laptop{
+   @media (min-width: map-get($map: vars.$breakpoints-screen, $key: "lg" )){
+      @content;
+   }
+}
+
+@mixin desktop{
+   @media (min-width: map-get($map: vars.$breakpoints-screen, $key: "xl" )){
+      @content;
+   }
+}

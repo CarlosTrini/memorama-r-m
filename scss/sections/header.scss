@@ -1,0 +1,82 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mixins;
+
+.header{
+   position: relative;
+   padding: 1rem 0;
+   color: vars.$secondary;
+   border-bottom: .2rem solid vars.$main;
+   background-color: vars.$dark;
+}
+
+.nav{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   gap: 1.5rem;
+
+   .logo{
+      width: 13rem;
+      
+   }
+
+   .menu-responsive{
+      width: 3rem;
+      @include mixins.laptop{
+         display: none;
+      }
+      &:hover{
+         animation: menu_animation ease-in-out 1s forwards;
+      }
+   }
+
+
+   &-items{
+      position: absolute;
+      top:100%;
+      left: -150%;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 1rem;
+      background-color: vars.$dark;
+      transition: all .3s ease-in-out;
+
+      @include mixins.laptop{
+         position: static;
+         flex-direction: row;
+         width: fit-content;
+      }
+    li{
+       text-align: center;
+       text-transform: capitalize;
+       font-weight: vars.$bold;
+       span{
+          padding: .2rem;
+          color: vars.$dark;
+          border-radius: 50%;
+         background-color:vars.$main;
+       }
+    }
+   }
+}
+
+.show-menu{
+   left: 0;
+}
+
+
+
+@keyframes menu_animation {
+   0%{
+      transform: rotate(0deg);
+   }
+   100%{
+      transform: rotate(360deg);
+   }
+   
+}

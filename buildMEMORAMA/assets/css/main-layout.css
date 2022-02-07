@@ -1,0 +1,2 @@
+@use '../utils/variables'as vars;@use '../utils/mixins'as mixins;.main{width:100%;height:100vh;background:url("../images/back.jpg") no-repeat center}
+/*# sourceMappingURL=main-layout.css.map */

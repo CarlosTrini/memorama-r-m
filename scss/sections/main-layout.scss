@@ -1,0 +1,89 @@
+@use '../utils/variables'as vars;
+@use '../utils/mixins'as mixins;
+
+
+.main {
+   width: 100%;
+   min-height: 100vh;
+   padding: 2rem 0;
+   overflow: auto;
+   background: url('../images/back.jpg') no-repeat center/cover;
+}
+
+.cards {
+
+   &-container {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 1rem;
+      min-height: 50vh;
+      max-width: 55rem;
+      margin: 0 auto;
+   }
+
+   .card {
+      position: relative;
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      overflow: hidden;
+
+      &-img {
+         position: relative;
+         width: 8rem;
+         height: 8rem;
+      }
+
+      &-img-back {
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 10;
+         display: block;
+         width: 8rem;
+         height: 8rem;
+         border-radius: 50%;
+         background: vars.$main url('../images/portal.png') center/cover no-repeat;
+      }
+   }
+}
+
+.hide-card-selected{
+   display: none;
+}
+
+.hide-card-back {
+   animation: hide_card_back ease-in-out .3s forwards;
+}
+
+.show-card-back {
+   animation: show_card_back ease-in-out .3s forwards;
+}
+
+@keyframes hide_card_back {
+   0% {
+      width: 8rem;
+      height: 8rem;
+   }
+
+   100% {
+      width: 0;
+      height: 0;
+   }
+}
+
+
+@keyframes show_card_back {
+   0% {
+      width: 0;
+      height: 0;
+   }
+
+   100% {
+      width: 8rem;
+      height: 8rem;
+   }
+}

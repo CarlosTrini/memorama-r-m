@@ -1,0 +1,54 @@
+@forward './sections/';
+@forward './utils/normalize';
+@use './utils/variables' as vars;
+
+//---------------------- GLOBALS
+html{
+   box-sizing: border-box;
+}
+*, *::after, *::before{
+   box-sizing: inherit;
+}
+body{
+   font-family:vars.$font-nunito;
+}
+h1,h2,h3,p, ul{
+   margin: 0;
+   padding: 0;
+}
+li{
+   list-style:none;
+}
+
+img{
+   width: 100%;
+   height:100%;
+}
+
+
+// --- GLOBALS
+.container{
+   width: 90%;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+.block-body{
+   max-height: 100vh;
+   overflow: hidden;
+}
+
+
+.none{
+   display: none;
+}
+
+.replay{
+   border-radius: .3rem;
+   border: none;
+   padding: .3rem;
+   background-color: vars.$secondary;
+
+   &:hover{
+      background-color: vars.$main;
+   }
+}
